@@ -1,0 +1,218 @@
+body {
+  background: #cbcbcb;
+  font-size: 20px;
+}
+
+body header {
+  height: 250px;
+}
+
+body main {
+  margin: auto;
+  margin-top: 50px;
+  width: 800px;
+}
+
+body main #todoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main #todoContainer a:hover {
+  text-decoration: none;
+}
+
+body main #todoContainer .card {
+  width: 250px;
+}
+
+body main #todoContainer .card .card-head {
+  padding: 15px;
+  background: #1156a0;
+}
+
+body main #todoContainer .card .card-head:hover {
+  background: red;
+}
+
+body main #todoContainer #todoList {
+  width: 100%;
+}
+
+body main #todoContainer #todoList #addTodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #1156a0;
+  padding: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+body main #todoContainer #todoList #addTodo #todoTitle {
+  width: 75%;
+  max-height: 40px;
+}
+
+body main #todoContainer #todoList #advancedTodo {
+  width: 100%;
+}
+
+body main #todoContainer #todoList #advancedTodo .card {
+  width: 100%;
+}
+
+body main #todoContainer #todoList #todoListHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  background: #ededed;
+}
+
+body main #todoContainer #todoList #todoListBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  background: white;
+}
+
+body main #todoContainer #todoList #todoListBody .todoItem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 15px;
+}
+
+body main #todoContainer #todoList #todoListBody .todoItem .todoTitle {
+  width: 100%;
+}
+
+body main #todoContainer #todoList #todoListBody .todoItem .todoStatus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+}
+
+body main #todoContainer #todoList #todoListBody .todoItem .prioBg-0 {
+  color: blue;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body main #todoContainer #todoList #todoListBody .todoItem .prioBg-1 {
+  color: orange;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body main #todoContainer #todoList #todoListBody .todoItem .prioBg-2 {
+  color: red;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body main #todoContainer #todoList #todoListFooter {
+  padding: 15px;
+  background: white;
+}
+
+@media screen and (max-width: 800px) {
+  body main {
+    width: 100%;
+    margin-top: 0 !important;
+  }
+  #todoList {
+    width: 100%;
+  }
+  #todoList #addTodo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    background: red;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15px;
+    gap: 15px;
+  }
+  #todoList #addTodo #todoTitle {
+    width: 100% !important;
+    max-height: 40px;
+  }
+  #todoList .todoItem {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #todoList .todoItem .todoTitle {
+    font-weight: 600;
+  }
+  #todoList .todoItem .todoStatus {
+    width: 180px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

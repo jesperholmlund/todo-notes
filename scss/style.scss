@@ -1,0 +1,145 @@
+$background-color: #cbcbcb;
+$backgroundPrimary: #1156a0;
+$padding: 15px;
+$background-light: white;
+
+body {
+  background: $background-color;
+  font-size: 20px;
+  header {
+    //background: $backgroundPrimary;
+    height: 250px;
+  }
+  main {
+    margin: auto;
+    margin-top: 50px;
+    width: 800px;
+    #todoContainer {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      a:hover {
+        text-decoration: none;
+      }
+      .card {
+        width: 250px;
+        //box-shadow: 4px 8px 5px #757575;
+        .card-head {
+          padding: 15px;
+          background: $backgroundPrimary;
+        }
+        .card-head:hover {
+          background: red;
+        }
+      }
+      #todoList {
+        width: 100%;
+        #addTodo {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background: #1156a0;
+          padding: $padding;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          #todoTitle {
+            width: 75%;
+            max-height: 40px;
+          }
+        }
+        #advancedTodo {
+          width: 100%;
+          .card {
+            width: 100%;
+          }
+        }
+        #todoListHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: $padding;
+          background: #ededed;
+        }
+        #todoListBody {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: $padding;
+          background: $background-light;
+          .todoItem {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: $padding;
+            .todoTitle {
+              width: 100%;
+            }
+            .todoStatus {
+              display: flex;
+              flex-direction: row;
+              min-width: 200px;
+              justify-content: space-between;
+              align-items: center;
+              opacity: 0.5;
+            }
+            .prioBg-0 {
+              color: blue;
+              height: fit-content;
+            }
+            .prioBg-1 {
+              color: orange;
+              height: fit-content;
+            }
+            .prioBg-2 {
+              color: red;
+              height: fit-content;
+            }
+          }
+        }
+        #todoListFooter {
+          padding: $padding;
+          background: $background-light;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    //background-color: lightgreen !important;
+    main {
+      width: 100%;
+      margin-top: 0 !important;
+    }
+  }
+  #todoList {
+    width: 100%;
+    #addTodo {
+      display: flex;
+      flex-direction: column !important;
+      background: red;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $padding;
+      gap: 15px;
+      #todoTitle {
+        width: 100% !important;
+        max-height: 40px;
+      }
+    }
+    .todoItem {
+      flex-direction: column !important;
+      .todoTitle {
+        font-weight: 600;
+      }
+      .todoStatus {
+        width: 180px !important;
+      }
+    }
+  }
+}
