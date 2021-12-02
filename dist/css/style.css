@@ -1,5 +1,5 @@
 body {
-  background: #cbcbcb;
+  background: cornsilk;
   font-size: 20px;
 }
 
@@ -11,6 +11,84 @@ body main {
   margin: auto;
   margin-top: 50px;
   width: 800px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body main #noteContainer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 7px 10px 9px 4px #afafaf;
+          box-shadow: 7px 10px 9px 4px #afafaf;
+}
+
+body main #noteContainer #addNote {
+  background: red;
+  background: #1156a0;
+  padding: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+body main #noteContainer #noteListHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  background: #ededed;
+}
+
+body main #noteContainer #noteListBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  background: white;
+}
+
+body main #noteContainer #noteListBody #noteTitle {
+  border-right: 1px solid black;
+  width: 200px;
+  font-size: 16px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main #noteContainer #noteListBody #noteContent {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding-left: 15px;
+}
+
+body main #noteContainer #noteListFooter {
+  padding: 15px;
+  background: white;
 }
 
 body main #todoContainer {
@@ -25,6 +103,8 @@ body main #todoContainer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 7px 10px 9px 4px #afafaf;
+          box-shadow: 7px 10px 9px 4px #afafaf;
 }
 
 body main #todoContainer a:hover {
@@ -174,9 +254,16 @@ body main #todoContainer #todoList #todoListFooter {
 }
 
 @media screen and (max-width: 800px) {
+  body header {
+    background: cornsilk;
+  }
   body main {
     width: 100%;
     margin-top: 0 !important;
+  }
+  body main #addNote {
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
   }
   #todoList {
     width: 100%;
@@ -197,6 +284,8 @@ body main #todoContainer #todoList #todoListFooter {
             justify-content: space-between;
     padding: 15px;
     gap: 15px;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
   }
   #todoList #addTodo #todoTitle {
     width: 100% !important;

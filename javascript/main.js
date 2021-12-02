@@ -1,19 +1,4 @@
 window.onload = function () {
-  // class Todo {
-  //   constructor(title, status) {
-  //     this.title = title;
-  //     this.status = status;
-  //   }
-  // }
-  // const todos = [];
-  // const todoListBody = document.getElementById("todoListBody");
-  // todos.push(new Todo("Lorem ipsum", "ongoing"));
-  // for (let i = 0; i < todos.length; i++) {
-  //   todoListBody.innerHTML = `<div class="todoTitle"><i class="fa fa-trash"></i> ${todos[i].title}</div>
-  //       <div class="todoStatus">${todos[i].status}</div>
-  //   `;
-  // }
-
   let todoTitle = document.getElementById("todoTitle");
   let prioRadios = document.getElementsByClassName("prioRadio");
 

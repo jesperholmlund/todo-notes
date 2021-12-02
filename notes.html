@@ -21,19 +21,15 @@
       href="/assets/font-awesome-4.7.0/css/font-awesome.css"
     />
     <link rel="stylesheet" href="/dist/css/style.css" />
-    <script src="/javascript/main.js"></script>
+    <script src="/javascript/notes.js"></script>
   </head>
   <body>
-    <header class="jumbotron"><h3 class="h3">Lorem ipsum</h3></header>
+    <header class=""><h3 class="h3">Lorem ipsum</h3></header>
     <main>
-      <div id="container">
-        <div id="todoList">
-          <div id="addTodo">
-            <input type="text" id="todoTitle" placeholder="todo message..." />
+      <div id="noteContainer">
+        <div id="noteList">
+          <div id="addNote">
             <p>
-              <button type="submit" id="addBtn" class="btn btn-primary">
-                Submit
-              </button>
               <a
                 class="btn btn-light"
                 data-toggle="collapse"
@@ -42,60 +38,39 @@
                 aria-expanded="false"
                 aria-controls="advancedTodo"
               >
-                Edit priority
+                Add new note
               </a>
             </p>
           </div>
           <div class="collapse" id="advancedTodo">
             <div class="card card-body">
-              <div>
-                Priority:
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input prioRadio"
-                    type="radio"
-                    name="exampleRadios"
-                    id="prio-1"
-                    value="option1"
-                    checked
-                  />
-                  <label class="form-check-label" for="exampleRadios1">
-                    Low
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input prioRadio"
-                    type="radio"
-                    name="exampleRadios"
-                    id="prio-2"
-                    value="option2"
-                  />
-                  <label class="form-check-label" for="exampleRadios2">
-                    Medium
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input prioRadio"
-                    type="radio"
-                    name="exampleRadios"
-                    id="prio-3"
-                    value="option2"
-                  />
-                  <label class="form-check-label" for="exampleRadios2">
-                    High
-                  </label>
-                </div>
+              <div class="form-group">
+                <label for="noteTitle">Title</label>
+                <textarea
+                  class="form-control"
+                  id="noteTitleAdd"
+                  rows="1"
+                ></textarea>
+                <label for="noteAddContent">Content</label>
+                <textarea
+                  class="form-control"
+                  id="noteContentAdd"
+                  rows="3"
+                ></textarea>
+                <button type="submit" id="addNoteBtn" class="btn btn-primary">
+                  Submit
+                </button>
               </div>
             </div>
           </div>
-          <div class="bg-primary text-white" id="todoListHeader">
-            <div id="todoListHeaderTitle">Todo</div>
-            <div id="todoListHeaderStatus"></div>
+          <div class="bg-primary text-white" id="noteListHeader">
+            <div id="noteHeaderTitle">Notes</div>
           </div>
-          <div id="todoListBody"></div>
-          <div id="todoListFooter"></div>
+          <div id="noteListBody">
+            <div id="noteTitle"></div>
+            <div id="noteContent"></div>
+          </div>
+          <div id="noteListFooter"></div>
         </div>
       </div>
     </main>
