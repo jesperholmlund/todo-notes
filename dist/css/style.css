@@ -1,5 +1,5 @@
 body {
-  background: cornsilk;
+  background: #f7f5ef;
   font-size: 20px;
 }
 
@@ -255,7 +255,7 @@ body main #todoContainer #todoList #todoListFooter {
 
 @media screen and (max-width: 800px) {
   body header {
-    background: cornsilk;
+    background: #f7f5ef;
   }
   body main {
     width: 100%;
