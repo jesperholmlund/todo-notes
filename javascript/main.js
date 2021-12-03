@@ -6,9 +6,11 @@ window.onload = function () {
     numb = 0;
     for (let i = 0; i < prioRadios.length; i++) {
       if (todoTitle.value.length < 3) {
-        todoTitle.value = "";
-        todoTitle.placeholder = "Too short :(";
+        document.getElementById("failMessage").style.display = "block";
+        document.getElementById("failMessage").innerHTML =
+          "Too short. Most be at least 3 characters";
       } else {
+        document.getElementById("failMessage").style.display = "none";
         if (prioRadios[i].checked == true) {
           if (i === 0) {
             todoListBody.innerHTML += `<div class="todoItem"><div class="todoTitle"> ${todoTitle.value}</div>

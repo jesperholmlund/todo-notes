@@ -25,7 +25,6 @@ body main #noteContainer {
 }
 
 body main #noteContainer #addNote {
-  background: red;
   background: #1156a0;
   padding: 15px;
   padding-top: 25px;
@@ -35,18 +34,7 @@ body main #noteContainer #addNote {
 }
 
 body main #noteContainer #noteListHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 15px;
-  background: #ededed;
 }
 
 body main #noteContainer #noteListBody {
@@ -78,6 +66,10 @@ body main #noteContainer #noteListBody #noteTitle {
           flex-direction: column;
 }
 
+body main #noteContainer #noteListBody #noteTitle .noteListTitle:hover {
+  text-decoration: underline;
+}
+
 body main #noteContainer #noteListBody #noteContent {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -105,23 +97,6 @@ body main #todoContainer {
           justify-content: space-between;
   -webkit-box-shadow: 7px 10px 9px 4px #afafaf;
           box-shadow: 7px 10px 9px 4px #afafaf;
-}
-
-body main #todoContainer a:hover {
-  text-decoration: none;
-}
-
-body main #todoContainer .card {
-  width: 250px;
-}
-
-body main #todoContainer .card .card-head {
-  padding: 15px;
-  background: #1156a0;
-}
-
-body main #todoContainer .card .card-head:hover {
-  background: red;
 }
 
 body main #todoContainer #todoList {
@@ -254,9 +229,6 @@ body main #todoContainer #todoList #todoListFooter {
 }
 
 @media screen and (max-width: 800px) {
-  body header {
-    background: #f7f5ef;
-  }
   body main {
     width: 100%;
     margin-top: 0 !important;
@@ -276,9 +248,6 @@ body main #todoContainer #todoList #todoListFooter {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
-    background: red;
-    -ms-flex-direction: row;
-        flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

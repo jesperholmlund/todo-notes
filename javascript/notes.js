@@ -12,10 +12,17 @@ window.onload = function () {
   let noteContent = document.getElementById("noteContent");
   const notes = [];
   addNote.addEventListener("click", function () {
-    notes.push(new Note(noteTitleAdd.value, noteContentAdd.value));
-    console.log(notes);
-    noteTitle.innerHTML += `<div class="noteListTitle"><i class="fa fa-trash"></i> ${noteTitleAdd.value}</div>`;
-    noteList();
+    if (noteTitleAdd.value == "" || noteContentAdd == "") {
+      document.getElementById("failMessage").style.display = "block";
+      document.getElementById("failMessage").innerHTML =
+        "You need both titlel and content!";
+    } else {
+      document.getElementById("failMessage").style.display = "none";
+      notes.push(new Note(noteTitleAdd.value, noteContentAdd.value));
+      console.log(notes);
+      noteTitle.innerHTML += `<div class="noteListTitle"><i class="fa fa-trash"></i> ${noteTitleAdd.value}</div>`;
+      noteList();
+    }
   });
 
   let noteListTitle = document.getElementsByClassName("noteListTitle");

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Notes</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -28,6 +28,8 @@
       <a href="index.html">Back to app list</a>
       <div id="noteContainer">
         <div id="noteList">
+          <!--Element för att lägga till en anteckningar
+          Trycker man på knappen expanderar man en div med boostrap-->
           <div id="addNote">
             <p>
               <a
@@ -42,7 +44,14 @@
               </a>
             </p>
           </div>
+          <!--Det är denna div som öppnas med knappen. Den innehåller först ett felmeddelande
+          som är dolt men kan öppnas med javascript om title eller innehåll är tomt-->
           <div class="collapse" id="advancedTodo">
+            <div
+              class="card-header bg-danger"
+              style="display: none"
+              id="failMessage"
+            ></div>
             <div class="card card-body">
               <div class="form-group">
                 <label for="noteTitle">Title</label>

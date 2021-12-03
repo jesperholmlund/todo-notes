@@ -17,69 +17,66 @@ body {
     width: 800px;
     height: fit-content;
     #noteContainer {
+      //höjden är satt på fit-content och därför dynamisk
       height: fit-content;
+      //lite skugga för att få saken att hamna längre fram/mer i fokus
       box-shadow: 7px 10px 9px 4px #afafaf;
       #addNote {
-        background: red;
         background: #1156a0;
         padding: $padding;
         padding-top: 25px;
         padding-bottom: 25px;
+        //jag valde att göra lite rundare hörn för en mjukare framtoning
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
       }
       #noteListHeader {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         padding: $padding;
-        background: #ededed;
       }
       #noteListBody {
+        //kör flex på bodyn så att listan med note titlar hamnar till vänster och innehåll till höger
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: $padding;
         background: $background-light;
         #noteTitle {
+          //en border för att för att separera
           border-right: 1px solid black;
           width: 200px;
+          //jag ändrade storlken på fonten en aning då jag vill att innehållet
+          //med större text ska vara i fokus
           font-size: 16px;
           height: 100px;
+          //kör flex på column så dom hamnar nergående ordning
           display: flex;
           flex-direction: column;
+          .noteListTitle:hover {
+            //bara för att man ska få nån slags respons på att dom är tryckbara
+            text-decoration: underline;
+          }
         }
         #noteContent {
+          //gör höjden dynamisk för innehållets div
           height: fit-content;
           width: 100%;
           padding-left: $padding;
         }
       }
+      //en footer är tillagd i syfte att skapa lite utrymme längst ner
+      //så det inte ska bli så trångt
       #noteListFooter {
         padding: $padding;
         background: $background-light;
       }
     }
     #todoContainer {
+      //container för todos kör också med flex i kolumn och har skugga för att stå ut mer
       display: flex;
       flex-direction: row;
       width: 100%;
       justify-content: space-between;
       box-shadow: 7px 10px 9px 4px #afafaf;
-      a:hover {
-        text-decoration: none;
-      }
-      .card {
-        width: 250px;
-        //box-shadow: 4px 8px 5px #757575;
-        .card-head {
-          padding: 15px;
-          background: $backgroundPrimary;
-        }
-        .card-head:hover {
-          background: red;
-        }
-      }
       #todoList {
         width: 100%;
         #addTodo {
@@ -133,6 +130,7 @@ body {
               align-items: center;
               opacity: 0.5;
             }
+            //har get dom olika prioriteringsraderna olika klassr med färg
             .prioBg-0 {
               color: blue;
               height: fit-content;
@@ -147,6 +145,8 @@ body {
             }
           }
         }
+        //en footer är tillagd i syfte att skapa lite utrymme längst ner
+        //så det inte ska bli så trångt
         #todoListFooter {
           padding: $padding;
           background: $background-light;
@@ -156,16 +156,16 @@ body {
   }
 }
 
+//jag kör media query när skärmen är mindre än 800px bred
+//800 valda jag därför att mina appar är 800px breda
 @media screen and (max-width: 800px) {
   body {
-    header {
-      background: $background-color;
-    }
-    //background-color: lightgreen !important;
     main {
       width: 100%;
       margin-top: 0 !important;
       #addNote {
+        //jag tog bort hörens radius. det känns bättre utan radius när dom täcker hela skärmen
+        //omportant lägger jag till för att överskirda allt annat
         border-top-right-radius: 0px !important;
         border-top-left-radius: 0px !important;
       }
@@ -175,12 +175,12 @@ body {
     width: 100%;
     #addTodo {
       display: flex;
+      //ändra flex till column så at tknapparna hamnar under input
       flex-direction: column !important;
-      background: red;
-      flex-direction: row;
       justify-content: space-between;
       padding: $padding;
       gap: 15px;
+      //tar också bort radiusen på denna när skärmen är mindre
       border-top-right-radius: 0px !important;
       border-top-left-radius: 0px !important;
       #todoTitle {
@@ -189,8 +189,10 @@ body {
       }
     }
     .todoItem {
+      //ändrar till column så siptunna och priortering hamnar under todon
       flex-direction: column !important;
       .todoTitle {
+        //gör todons text tjockare så den står ut mer fårn mängden
         font-weight: 600;
       }
       .todoStatus {
