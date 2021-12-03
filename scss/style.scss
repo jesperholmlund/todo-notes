@@ -47,7 +47,7 @@ body {
           //jag ändrade storlken på fonten en aning då jag vill att innehållet
           //med större text ska vara i fokus
           font-size: 16px;
-          height: 100px;
+          height: fit-content;
           //kör flex på column så dom hamnar nergående ordning
           display: flex;
           flex-direction: column;

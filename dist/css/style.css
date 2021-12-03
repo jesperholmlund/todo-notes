@@ -56,7 +56,9 @@ body main #noteContainer #noteListBody #noteTitle {
   border-right: 1px solid black;
   width: 200px;
   font-size: 16px;
-  height: 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
